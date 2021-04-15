@@ -1,0 +1,19 @@
+.services {
+    background-color: $dark;
+    color: $white;
+    padding: 104px 0 104px;
+
+    &__list {
+        @include flex();
+        text-align: center;
+    }
+
+    &__item-title {
+        @include font(20px,400,24px);
+        margin: 28px 0 16px;
+    }
+
+    &__item-description {
+        @include font(14px,300,17px);
+    }
+}

@@ -1,0 +1,94 @@
+.featured {
+    margin-top: 96px;
+    text-align: center;
+
+
+    &__title {
+        @include font(30px, 400, 36px);
+    }
+
+    &__text {
+        @include font(14px, 400, 17px);
+        color: $grey;
+        margin: 6px 0 18px 0;
+    }
+
+    &__list {
+        @include flex();
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-top: 30px;
+        background-color: $light-grey;
+        width: 360px;
+        text-align: left;
+        position: relative;
+
+        &-hover-visible:hover &-img {
+            filter: brightness(30%);
+        }
+
+        &-hover-visible:hover &-add {
+            visibility: visible;
+        }
+
+        &-name {
+            @include font(13px, 400, 16px);
+            text-transform: uppercase;
+            margin: 24px 0 13px 18px;
+        }
+
+        &-text {
+            @include font(14px, 300, 17px);
+            color: $item-text;
+            margin: 0 0 0 18px;
+        }
+
+        &-price {
+            @include font(16px, 400, 19px);
+            color: $pink;
+            margin: 18px 0 20px 18px;
+        }
+
+        &-add {
+            @include flex(none);
+            @include font(16px, 400, 19px);
+            border: 1px solid $white;
+            background-color: transparent;
+            position: absolute;
+            left: 50%;
+            top: 189px;
+            transform: translateX(-50%);
+            color: $white;
+            visibility: hidden;
+            cursor: pointer;
+            outline: none;
+        }
+
+        &-add-img {
+            margin: 10px 0px 8px 11px;
+            fill: $white;
+        }
+
+        &-add-text {
+            margin: 13px 13px 13px 11px;
+        }
+    }
+
+    &__goods-link {
+        @include font(16px, 400, 19px);
+        display: inline-block;
+        color: $pink;
+        background-color: $white;
+        padding: 14px 39px;
+        margin: 63px 0 109px;
+        text-decoration: none;
+        border: 1px solid $pink;
+
+        &:hover {
+            color: $white;
+            background-color: $pink;
+        }
+    }
+}
