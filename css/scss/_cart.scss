@@ -1,0 +1,171 @@
+.cart {
+    margin: 96px 0 128px 0;
+
+    &__list {
+        margin: 0 0 92px 0;
+        min-height: 652px;
+        width: 652px;
+    }
+
+    &__item {
+        @include flex(none);
+        margin: 0 0 40px 0;
+        position: relative;
+        transition: .3s transform;
+        transform-origin: 0 0;
+
+        &:hover {
+            box-shadow: 15px 15px 15px 0 $light-grey;
+        }
+
+        &-delete {
+            position: absolute;
+            top: 28px;
+            right: 22px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+        }
+
+        &-list {
+            @include font(22px, 400, 32px);
+            margin: 26px 97px 0 31px;
+
+            &_title {
+                @include font(24px, 400, 29px);
+                text-transform: uppercase;
+                margin: 0 0 42px 0;
+            }
+
+            &_price-pink {
+                color: $pink;
+            }
+
+            &_quanity-box {
+                @include font(18px, 400, 21px);
+                border: solid $light-grey;
+                width: 43px;
+                min-height: 25px;
+                margin: 0 0 0 25px;
+                text-align: center;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &__button {
+        @include font(14px, 300, 16px);
+        border: solid $light-grey;
+        text-transform: uppercase;
+        min-width: 235px;
+        height: 50px;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+            font-weight: 700;
+        }
+    }
+}
+
+.order {
+    margin: 96px 0 0 0;
+
+    &__form {
+        @include flex(none, column);
+        width: 360px;
+
+        &-title {
+            @include font(16px, 300, 19px);
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+        }
+
+        &-input {
+            @include font(13px, 300, 16px);
+            height: 45px;
+            border: solid $light-grey;
+            margin: 0 0 20px 0;
+
+            &::placeholder {
+                color: $light-grey;
+            }
+
+            &:focus {
+                border: solid $grey;
+                outline: none;
+            }
+        }
+
+        &-button {
+            @include font(11px, 300, 13px);
+            border: solid $light-grey;
+            color: $light-grey;
+            text-transform: uppercase;
+            background-color: transparent;
+            cursor: pointer;
+            height: 34px;
+            width: 100px;
+            margin: 23px 0 58px 0;
+            outline: none;
+
+            &:hover {
+                border: solid $grey;
+                color: $grey;
+            }
+        }
+    }
+
+    &__total {
+        text-align: right;
+        background-color: #F5F3F3;
+        text-transform: uppercase;
+
+        &-subtext {
+            @include font(11px, 400, 13px);
+            padding: 39px 34px 0 0;
+
+            &-price {
+                margin: 0 0 0 15px;
+            }
+        }
+
+        &-text {
+            @include font(16px, 300, 19px);
+            padding: 12px 37px 21px 0;
+
+            &-price {
+                color: $pink;
+                font-weight: 700;
+                margin: 0 0 0 15px;
+            }
+        }
+
+        & hr {
+            margin: 0 41px 0 41px;
+        }
+
+        &-button {
+            @include font(16px, 300, 19px);
+            text-transform: uppercase;
+            background-color: $white;
+            border: none;
+            color: $pink;
+            height: 50px;
+            width: 273px;
+            margin: 17px 43px 43px 0;
+            cursor: pointer;
+            outline: none;
+
+            &:hover {
+                background-color: $pink;
+                color: $white;
+            }
+        }
+    }
+}

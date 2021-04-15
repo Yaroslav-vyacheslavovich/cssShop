@@ -1,0 +1,23 @@
+.presentation {
+    background-color: $light-pink;
+    display: flex;
+
+    &__title {
+        @include font(48px,900,58px);
+        margin: 290px 0 0 72px;
+        height: 93px;
+        width: 393px;
+        padding: 0 0 0 16px;
+        text-transform: uppercase;
+        border-left: 12px solid $pink;
+    }
+
+    &__subtitle {
+        @include font(32px,700,38px);
+        display: block;
+    }
+
+    &__subtitle-pink {
+        color: $pink;
+    }
+}
