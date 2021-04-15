@@ -1,0 +1,54 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+body {
+    font-family: Lato;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer {
+    background: url(../img/footer-back.jpg) round #E2E2E2;
+}
+
+.main {
+
+    &__back {
+        background-color: $light-pink;
+    }
+
+    &__title {
+        @include font(24px, 400, 29px);
+        width: 100%;
+        min-height: 88px;
+        color: $pink;
+        padding: 60px 0 0 0;
+        text-transform: uppercase;
+    }
+}
+
+.flex{
+    @include flex;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+ 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
