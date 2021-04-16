@@ -4,11 +4,11 @@
 
 
     &__title {
-        @include font(30px,400,36px);
+        @include font(30px, 400, 36px);
     }
 
     &__text {
-        @include font(14px,400,17px);
+        @include font(14px, 400, 17px);
         color: $grey;
         margin: 6px 0 18px 0;
     }
@@ -25,35 +25,35 @@
         text-align: left;
         position: relative;
 
-        &-hover-visible:hover &__item-img {
+        &-hover-visible:hover &-img {
             filter: brightness(30%);
         }
-    
-        &-hover-visible:hover &__item-add {
+
+        &-hover-visible:hover &-add {
             visibility: visible;
         }
-    
+
         &-name {
-            @include font(13px,400,16px);
+            @include font(13px, 400, 16px);
             text-transform: uppercase;
             margin: 24px 0 13px 18px;
         }
-    
+
         &-text {
-            @include font(14px,300,17px);
+            @include font(14px, 300, 17px);
             color: $item-text;
             margin: 0 0 0 18px;
         }
-    
+
         &-price {
-            @include font(16px,400,19px);
+            @include font(16px, 400, 19px);
             color: $pink;
             margin: 18px 0 20px 18px;
         }
-    
+
         &-add {
             @include flex(none);
-            @include font(16px,400,19px);
+            @include font(16px, 400, 19px);
             border: 1px solid $white;
             background-color: transparent;
             position: absolute;
@@ -65,19 +65,19 @@
             cursor: pointer;
             outline: none;
         }
-    
+
         &-add-img {
             margin: 10px 0px 8px 11px;
             fill: $white;
         }
-    
+
         &-add-text {
             margin: 13px 13px 13px 11px;
         }
     }
 
     &__goods-link {
-        @include font(16px,400,19px);
+        @include font(16px, 400, 19px);
         display: inline-block;
         color: $pink;
         background-color: $white;

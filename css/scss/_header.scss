@@ -15,7 +15,7 @@
     &__search {
         cursor: pointer;
         fill: $white;
-        
+
         &:hover {
             fill: $pink;
         }
@@ -27,8 +27,7 @@
         outline: none;
         cursor: pointer;
         fill: $white;
-        
-        &__button:hover {
+        &:hover {
             fill: $pink;
         }
     }
@@ -37,25 +36,25 @@
         margin: 0 0 0 33px;
         position: relative;
 
-        &-img_login{
+        &-img_login {
             fill: $white;
         }
-    
-        &-img_login:hover{
+
+        &-img_login:hover {
             fill: $pink;
         }
-    
-        &-img_cart{
+
+        &-img_cart {
             fill: $white;
         }
-    
-        &-img_cart:hover{
+
+        &-img_cart:hover {
             fill: $pink;
         }
     }
 
     &__not-empty-cart {
-        @include font(12px,400,18px);
+        @include font(12px, 400, 18px);
         min-height: 19px;
         min-width: 19px;
         background: $pink;
@@ -89,12 +88,12 @@
             outline: none;
             cursor: pointer;
         }
-    
+
         &-title {
             text-transform: uppercase;
             margin: 9px 0 4px;
         }
-    
+
         &-item {
             padding: 20px 0 0 0;
 
@@ -104,7 +103,7 @@
                 text-decoration: none;
             }
         }
-    
+
         &-subitem {
             margin: 11px 0 0 20px;
             text-decoration: none;
@@ -116,7 +115,7 @@
                 color: $grey;
                 text-decoration: none;
             }
-        
+
             &:hover {
                 background-color: $light-grey;
             }

@@ -1,3 +1,4 @@
+
 function openMenu() {
     document.querySelector(".header__navigation").style.transform = "scaleY(1)";
     document.querySelector(".header__navigation").style.visibility = "visible";
