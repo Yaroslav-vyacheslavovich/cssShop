@@ -493,6 +493,7 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 17px;
   font-style: normal;
   width: 215px;
+
   height: 49px;
   border-radius: 24px 0 0 24px;
   border: none;
@@ -1421,6 +1422,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border: solid #eaeaea;
   width: 43px;
   height: 25px;
+
   margin: 0 0 0 25px;
   text-align: center;
 }

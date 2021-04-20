@@ -32,8 +32,7 @@
         position: relative;
         transition: .3s transform;
         transform-origin: 0 0;
-        border: solid 1px;
-
+      
         &:hover {
             box-shadow: 15px 15px 15px 0 $light-grey;
         }
@@ -98,7 +97,7 @@
             }
         }
     }
-
+  
     &__buttons {
         @include desctop-mini {
             flex-direction: row;
