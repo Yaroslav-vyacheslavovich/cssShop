@@ -1,0 +1,71 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+body {
+    font-family: Lato;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    @include desctop-mini {
+        max-width: 98%;
+    }
+
+    @include tablet {
+        max-width: 96%;
+    }
+
+    @include mobile {
+        max-width: 92%;
+    }
+
+}
+
+.footer {
+    background: url(../img/footer-back.jpg) #E2E2E2;
+    background-size: cover;
+}
+
+.main {
+    &__back {
+        background-color: $light-pink;
+    }
+
+    &__title {
+        @include font(24px, 400, 29px);
+        width: 100%;
+        min-height: 88px;
+        color: $pink;
+        padding: 60px 0 0 0;
+        text-transform: uppercase;
+    }
+}
+
+.flex {
+    @include flex;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}

@@ -1,0 +1,43 @@
+.services {
+    background-color: $dark;
+    color: $white;
+    padding: 104px 0 104px 0;
+
+    @include tablet {
+        padding: 0 0 64px 0;
+    }
+
+    @include mobile {
+        padding: 0 0 81px 0;
+    }
+
+    &__list {
+        @include flex();
+        text-align: center;
+
+        @include tablet {
+            @include flex(center, column);
+        }
+    }
+
+    &__item {
+        @include tablet {
+            margin: 48px auto 0;
+            width: 46%;
+        }
+
+        @include mobile {
+            margin: 48px auto 0;
+            width: 90%;
+        }
+    }
+
+    &__item-title {
+        @include font(20px, 400, 24px);
+        margin: 28px 0 16px;
+    }
+
+    &__item-description {
+        @include font(14px, 300, 17px);
+    }
+}
