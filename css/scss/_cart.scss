@@ -1,0 +1,277 @@
+.align__cart {
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.cart {
+    margin: 96px 0 128px 0;
+
+    @include desctop-mini {
+        width: 60%;
+    }
+
+    @include tablet {
+        width: 100%;
+        margin: 60px 0 64px 0;
+    }
+
+    @include mobile {
+        margin: 40px 0 48px 0;
+    }
+
+    &__list {
+        margin: 0 0 72px 0;
+
+        @include tablet {
+            margin: 0 0 62px 0;
+        }
+
+        @include mobile {
+            margin: 0 0 30px 0;
+        }
+    }
+
+    &__item {
+        @include flex(none);
+        margin: 0 0 40px 0;
+        position: relative;
+        transition: .3s transform;
+        transform-origin: 0 0;
+
+        &:hover {
+            box-shadow: 15px 15px 15px 0 $light-grey;
+        }
+
+        &-delete {
+            position: absolute;
+            top: 28px;
+            right: 22px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+
+            @include mobile {
+                top: 17px;
+                right: 12px;
+            }
+        }
+
+        &-img {
+            @include tablet {
+                width: 38%;
+                height: 38%;
+            }
+        }
+
+        &-list {
+            @include font(22px, 400, 32px);
+            margin: 22px 97px 0 31px;
+
+            @include mobile {
+                @include font(14px, 400, 16px);
+                margin: 13px 57px 0 31px;
+            }
+
+            &_title {
+                @include font(24px, 400, 29px);
+                text-transform: uppercase;
+                margin: 0 0 42px 0;
+
+                @include mobile {
+                    @include font(16px, 400, 21px);
+                    margin: 0 0 25px 0;
+                }
+            }
+
+            &_price-pink {
+                color: $pink;
+            }
+
+            &_quanity-box {
+                @include font(18px, 400, 21px);
+                border: solid $light-grey;
+                width: 43px;
+                height: 25px;
+                margin: 0 0 0 25px;
+                text-align: center;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @include mobile {
+                    @include font(12px, 400, 16px);
+                    width: 25px;
+                    height: 13px;
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        @include desctop-mini {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        &-button {
+            @include font(14px, 300, 16px);
+            border: solid $light-grey;
+            text-transform: uppercase;
+            width: 235px;
+            height: 50px;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+
+            @include mobile {
+                @include font(12px, 300, 14px);
+                width: 48%;
+                padding: 8px 0 8px 0;
+                height: auto;
+            }
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.order {
+    margin: 96px 0 0 0;
+
+    @include desctop-mini {
+        width: 35%;
+    }
+
+    @include tablet {
+        margin: 0 0 128px 0;
+        @include flex();
+        width: 100%;
+    }
+
+    @include mobile {
+        margin: 0 0 96px 0;
+        @include flex(none, column);
+    }
+
+    &__form {
+        @include flex(none, column);
+        width: 360px;
+
+        @include desctop-mini {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 48%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &-title {
+            @include font(16px, 300, 19px);
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+        }
+
+        &-input {
+            @include font(13px, 300, 16px);
+            height: 45px;
+            border: solid $light-grey;
+            margin: 0 0 20px 0;
+
+            &::placeholder {
+                color: $light-grey;
+            }
+
+            &:focus {
+                border: solid $grey;
+                outline: none;
+            }
+        }
+
+        &-button {
+            @include font(11px, 300, 13px);
+            border: solid $light-grey;
+            color: $light-grey;
+            text-transform: uppercase;
+            background-color: transparent;
+            cursor: pointer;
+            height: 34px;
+            width: 100px;
+            margin: 23px 0 58px 0;
+            outline: none;
+
+            &:hover {
+                border: solid $grey;
+                color: $grey;
+            }
+        }
+    }
+
+    &__total {
+        text-align: right;
+        background-color: #F5F3F3;
+        text-transform: uppercase;
+        height: 214px;
+
+        @include tablet {
+            width: 48%;
+            margin: 40px 0 0 0;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &-subtext {
+            @include font(11px, 400, 13px);
+            padding: 39px 34px 0 0;
+
+            &-price {
+                margin: 0 0 0 15px;
+            }
+        }
+
+        &-text {
+            @include font(16px, 300, 19px);
+            padding: 12px 37px 21px 0;
+
+            &-price {
+                color: $pink;
+                font-weight: 700;
+                margin: 0 0 0 15px;
+            }
+        }
+
+        & hr {
+            margin: 0 41px 0 41px;
+        }
+
+        &-button {
+            @include font(16px, 300, 19px);
+            text-transform: uppercase;
+            background-color: $white;
+            border: none;
+            color: $pink;
+            height: 50px;
+            margin: 17px auto;
+            padding: 0 43px 0 43px;
+            cursor: pointer;
+            outline: none;
+            display: block;
+
+            &:hover {
+                background-color: $pink;
+                color: $white;
+            }
+        }
+    }
+}

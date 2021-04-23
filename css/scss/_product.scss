@@ -1,0 +1,172 @@
+.carousel-control-next {
+    justify-content: flex-end;
+    opacity: 1;
+
+    &-icon {
+        width: 47px;
+        height: 47px;
+        background-image: none;
+        background-color: $grey;
+
+        &-img {
+            fill: $dark;
+            margin: 12px 1px 0 0px;
+
+            &:hover {
+                fill: $pink;
+            }
+        }
+    }
+}
+
+.carousel-control-prev {
+    justify-content: flex-start;
+    opacity: 1;
+
+    &-icon {
+        width: 47px;
+        height: 47px;
+        background-image: none;
+        background-color: $grey;
+
+        &-img {
+            fill: $dark;
+            margin: 12px 1px 0 0px;
+
+            &:hover {
+                fill: $pink;
+            }
+        }
+    }
+}
+
+.product {
+    margin: -65px auto;
+    position: relative;
+    z-index: 2;
+    background-color: $white;
+    color: $item-text;
+    padding: 65px 0 65px 0;
+
+    &__type {
+        @include font(14px, 300, 16px);
+        text-transform: uppercase;
+        color: $pink;
+    }
+
+    &__title {
+        @include font(18px, 300, 21px);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include font(14px, 300, 16px);
+        max-width: 555px;
+        margin: 48px auto 32px auto;
+
+        @include mobile {
+            margin: 31px auto 32px auto;
+            padding: 0 24px 0 24px;
+        }
+
+    }
+
+    &__price {
+        @include font(24px, 300, 28px);
+        color: $pink;
+    }
+
+    &__selectors {
+
+        &-item {
+            width: max-content;
+            flex: none;
+        }
+
+        &-form {
+            @include font(14px, 400, 17px);
+            outline: none;
+            text-transform: uppercase;
+            padding: 0;
+
+            @include mobile {
+                @include font(10px, 400, 12px);
+            }
+        }
+    }
+
+    &__item-add {
+        @include font(16px, 400, 19px);
+        border: 1px solid $pink;
+        background-color: transparent;
+        color: $pink;
+        cursor: pointer;
+        outline: none;
+        margin: 48px 0 0 0;
+
+        &-img {
+            margin: 10px 0px 8px 11px;
+            fill: $pink;
+        }
+
+        &-text {
+            margin: 13px 13px 13px 11px;
+        }
+
+        &:hover {
+            background-color: $light-grey;
+        }
+    }
+}
+
+.hr__pink {
+    width: 63px;
+    border-bottom: 3px solid $pink;
+    opacity: 1;
+    margin: 12px auto 12px auto;
+}
+
+.hr__grey {
+    width: 47%;
+    margin: 65px auto 65px auto;
+
+    @include tablet {
+        margin: 49px auto 49px auto;
+    }
+}
+
+.accordion {
+    border: 0;
+    background-color: $dark;
+    outline: none;
+
+    &-button {
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:not(.collapsed) {
+            background-color: $white;
+            color: $dark;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.form-check-input:checked[type=radio] {
+    background-color: $pink;
+    border-color: $pink;
+}
+
+.product__featured {
+    margin: 193px 0 128px 0;
+}
+
+.non-visible {
+    @include desctop-mini {
+        display: none;
+    }
+}

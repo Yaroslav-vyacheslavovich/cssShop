@@ -1,0 +1,32 @@
+@mixin font($font-size, $font-weight, $line-height, $font-style:normal) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-style: $font-style;
+}
+
+;
+
+@mixin flex($justify-content:space-between, $flex-direction:row, $display:flex) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin desctop-mini {
+    @media(max-width: $desctop) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: $mobile) {
+        @content;
+    }
+}

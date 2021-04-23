@@ -1,0 +1,58 @@
+.social {
+    background-color: $dark;
+
+    &__align {
+        @include flex();
+
+        @include desctop-mini {
+            padding: 0 32px 0 32px;
+        }
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__copyright {
+        @include font(16px, 400, 19px);
+        color: $white;
+        margin: 30px 0 0 0;
+        padding: 0 0 30px 0;
+
+        @include mobile {
+            margin: 40px 0 9px 0;
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    &__list {
+        @include flex();
+        margin: 24px 0 0 0;
+
+        @include mobile {
+            margin: 43px 0 0 0;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        margin: 0 0 0 7px;
+
+        &-svg-back {
+            fill: $white;
+        }
+
+        &-svg-logo {
+            fill: $dark;
+        }
+
+        &-svg:hover &-svg-back {
+            fill: $pink;
+        }
+
+        &-svg:hover &-svg-logo {
+            fill: $white;
+        }
+    }
+}

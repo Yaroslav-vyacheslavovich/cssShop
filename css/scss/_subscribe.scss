@@ -1,0 +1,89 @@
+.subscribe {
+    background: rgba(244, 244, 244, 0.7);
+
+    &__align {
+        @include flex(none);
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__portrait {
+        @include flex(none, column);
+        width: 360px;
+        margin: 86px 0 130px;
+        flex-grow: 1;
+        align-items: center;
+
+        @include tablet {
+            margin: 54px 0 54px 0;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &-text {
+            @include font(20px, 400, 24px, italic);
+            color: $dark;
+            padding: 30px 0 0 0;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        flex-grow: 1;
+        text-align: center;
+        margin: 150px 0 0 0;
+
+        @include tablet {
+            margin: 0px 0 140px 0;
+        }
+
+        &-input {
+            @include font(14px, 400, 17px);
+            width: 215px;
+            height: 49px;
+            border-radius: 24px 0 0 24px;
+            border: none;
+            background-color: $light-grey;
+            padding: 0 0 0 22px;
+            outline: none;
+
+            @include mobile {
+                width: 55%;
+            }
+        }
+
+        &-submit {
+            @include font(14px, 400, 18px);
+            height: 49px;
+            border-radius: 0 24px 24px 0;
+            border: none;
+            background-color: $pink;
+            color: $white;
+            padding: 0px 22px 0px 22px;
+            outline: none;
+            cursor: pointer;
+            margin: 0 0 0 -4px;
+
+            @include mobile {
+                width: 30%;
+                padding: 0px 22px 0px 10px;
+            }
+        }
+    }
+
+    &__title {
+        @include font(24px, 700, 38px);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include font(18px, 400, 30px);
+        text-transform: uppercase;
+        margin-bottom: 32px;
+    }
+}
