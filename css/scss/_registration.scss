@@ -2,12 +2,31 @@
 
     &__align {
         display: flex;
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__form {
         @include font(16px, 300, 19px);
         @include flex(none, column);
-        margin: 64px 0 96px 2px;
+        margin: 64px 0 96px 16px;
+
+        @include desctop-mini {
+            margin: 40px 22px 96px 16px;
+        }
+
+        @include tablet {
+            width: 360px;
+            margin: 40px 0px 0px 0px;
+        }
+
+        @include mobile {
+            margin: 40px 0px 0px 0px;
+            width: 100%;
+        }
+
 
         &-title {
             padding-bottom: 20px;
@@ -109,7 +128,20 @@
     &__desc {
         @include font(24px, 300, 29px);
         max-width: 655px;
-        margin: 64px 0 0 128px;
+        margin: 64px 16px 0 128px;
+
+        @include desctop-mini {
+            @include font(16px, 300, 19px);
+            margin: 40px 16px 0 0px;
+        }
+
+        @include tablet {
+            margin: 40px 0px 100px 0px
+        }
+
+        @include mobile {
+            margin: 40px 0px 100px 0px
+        }
 
         &-title {
             font-weight: 300;

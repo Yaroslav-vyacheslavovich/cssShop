@@ -5,6 +5,14 @@
         @include flex();
         align-items: center;
         min-height: 75px;
+
+        @include desctop-mini {
+            padding: 0 25px 0 16px;
+        }
+
+        @include mobile {
+            padding: 0 10px 0 0px;
+        }
     }
 
     &__logo {
@@ -27,6 +35,7 @@
         outline: none;
         cursor: pointer;
         fill: $white;
+
         &:hover {
             fill: $pink;
         }
@@ -50,6 +59,10 @@
 
         &-img_cart:hover {
             fill: $pink;
+        }
+
+        @include mobile {
+            display: none;
         }
     }
 
@@ -79,6 +92,7 @@
         visibility: hidden;
         transition: .5s transform;
         transform-origin: 0 0;
+        z-index: 1;
 
         &-close {
             border: none;

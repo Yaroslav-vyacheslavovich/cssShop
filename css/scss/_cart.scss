@@ -1,10 +1,29 @@
 .cart {
     margin: 96px 0 128px 0;
 
+    @include desctop-mini {
+        width: 60%;
+    }
+
+    @include tablet {
+        width: 100%;
+        margin: 60px 0 64px 0;
+    }
+
+    @include mobile {
+        margin: 40px 0 48px 0;
+    }
+
     &__list {
-        margin: 0 0 92px 0;
-        min-height: 652px;
-        width: 652px;
+        margin: 0 0 72px 0;
+
+        @include tablet {
+            margin: 0 0 62px 0;
+        }
+
+        @include mobile {
+            margin: 0 0 30px 0;
+        }
     }
 
     &__item {
@@ -13,7 +32,7 @@
         position: relative;
         transition: .3s transform;
         transform-origin: 0 0;
-
+      
         &:hover {
             box-shadow: 15px 15px 15px 0 $light-grey;
         }
@@ -28,14 +47,31 @@
             cursor: pointer;
         }
 
+        &-img {
+            @include tablet {
+                width: 38%;
+                height: 38%;
+            }
+        }
+
         &-list {
             @include font(22px, 400, 32px);
-            margin: 26px 97px 0 31px;
+            margin: 22px 97px 0 31px;
+
+            @include mobile {
+                @include font(14px, 400, 16px);
+                margin: 13px 57px 0 31px;
+            }
 
             &_title {
                 @include font(24px, 400, 29px);
                 text-transform: uppercase;
                 margin: 0 0 42px 0;
+
+                @include mobile {
+                    @include font(16px, 400, 19px);
+                    margin: 0 0 25px 0;
+                }
             }
 
             &_price-pink {
@@ -46,29 +82,48 @@
                 @include font(18px, 400, 21px);
                 border: solid $light-grey;
                 width: 43px;
-                min-height: 25px;
+                height: 25px;
                 margin: 0 0 0 25px;
                 text-align: center;
 
                 &:focus {
                     outline: none;
                 }
+
+                @include mobile {
+                    width: 25px;
+                    height: 14px;
+                }
             }
         }
     }
+  
+    &__buttons {
+        @include desctop-mini {
+            flex-direction: row;
+            justify-content: space-around;
+        }
 
-    &__button {
-        @include font(14px, 300, 16px);
-        border: solid $light-grey;
-        text-transform: uppercase;
-        min-width: 235px;
-        height: 50px;
-        background-color: transparent;
-        cursor: pointer;
-        outline: none;
+        &-button {
+            @include font(14px, 300, 16px);
+            border: solid $light-grey;
+            text-transform: uppercase;
+            width: 235px;
+            height: 50px;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
 
-        &:hover {
-            font-weight: 700;
+            @include mobile {
+                @include font(12px, 300, 14px);
+                width: 48%;
+                padding: 8px 0 8px 0;
+                height: auto;
+            }
+
+            &:hover {
+                font-weight: 700;
+            }
         }
     }
 }
@@ -76,9 +131,36 @@
 .order {
     margin: 96px 0 0 0;
 
+    @include desctop-mini {
+        width: 35%;
+    }
+
+    @include tablet {
+        margin: 0 0 128px 0;
+        @include flex();
+        width: 100%;
+    }
+
+    @include mobile {
+        margin: 0 0 96px 0;
+        @include flex(none, column);
+    }
+
     &__form {
         @include flex(none, column);
         width: 360px;
+
+        @include desctop-mini {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 48%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
 
         &-title {
             @include font(16px, 300, 19px);
@@ -125,6 +207,16 @@
         text-align: right;
         background-color: #F5F3F3;
         text-transform: uppercase;
+        height: 214px;
+
+        @include tablet {
+            width: 48%;
+            margin: 40px 0 0 0;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
 
         &-subtext {
             @include font(11px, 400, 13px);
@@ -157,10 +249,11 @@
             border: none;
             color: $pink;
             height: 50px;
-            width: 273px;
-            margin: 17px 43px 43px 0;
+            margin: 17px auto;
+            padding: 0 43px 0 43px;
             cursor: pointer;
             outline: none;
+            display: block;
 
             &:hover {
                 background-color: $pink;

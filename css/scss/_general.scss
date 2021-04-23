@@ -16,14 +16,27 @@ body {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+
+    @include desctop-mini {
+        max-width: 98%;
+    }
+
+    @include tablet {
+        max-width: 96%;
+    }
+
+    @include mobile {
+        max-width: 92%;
+    }
+
 }
 
 .footer {
-    background: url(../img/footer-back.jpg) round #E2E2E2;
+    background: url(../img/footer-back.jpg) #E2E2E2;
+    background-size: cover;
 }
 
 .main {
-
     &__back {
         background-color: $light-pink;
     }
@@ -38,17 +51,21 @@ body {
     }
 }
 
-.flex{
+.flex {
     @include flex;
+
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 input[type="number"] {
-	-moz-appearance: textfield;
-	-webkit-appearance: textfield;
-	appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
 }
- 
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-	display: none;
+    display: none;
 }

@@ -2,19 +2,58 @@
     background-color: $light-pink;
     display: flex;
 
+    &__image {
+        width: 50%;
+        height: auto;
+
+        @include desctop-mini {
+            width: 50%;
+            height: auto;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+    }
+
     &__title {
-        @include font(48px,900,58px);
+        @include font(48px, 900, 58px);
         margin: 290px 0 0 72px;
         height: 93px;
         width: 393px;
         padding: 0 0 0 16px;
         text-transform: uppercase;
         border-left: 12px solid $pink;
+
+        @include desctop-mini {
+            margin: 200px 0 0 58px;
+            @include font(44px, 900, 52px);
+
+        }
+
+        @include tablet {
+            margin: 138px auto;
+        }
+
+        @include mobile {
+            @include font(38px, 900, 46px);
+            width: auto;
+            margin: 148px auto;
+        }
     }
 
     &__subtitle {
-        @include font(32px,700,38px);
+        @include font(32px, 700, 38px);
         display: block;
+
+        @include desctop-mini {
+            @include font(24px, 900, 28px);
+        }
+
+        @include mobile {
+            @include font(20px, 900, 24px);
+        }
     }
 
     &__subtitle-pink {
