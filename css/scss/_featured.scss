@@ -10,7 +10,6 @@
         margin: 64px 0 0 0;
     }
 
-
     &__title {
         @include font(30px, 400, 36px);
     }
@@ -73,7 +72,6 @@
             }
         }
 
-
         &-hover-visible:hover &-add {
             visibility: visible;
         }
@@ -119,8 +117,6 @@
                 margin: 13px 13px 13px 11px;
             }
         }
-
-
     }
 
     &__goods-link {
