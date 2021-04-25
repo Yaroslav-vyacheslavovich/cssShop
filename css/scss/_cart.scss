@@ -1,3 +1,10 @@
+
+.align__cart {
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
 .cart {
     margin: 96px 0 128px 0;
 
@@ -32,7 +39,7 @@
         position: relative;
         transition: .3s transform;
         transform-origin: 0 0;
-      
+
         &:hover {
             box-shadow: 15px 15px 15px 0 $light-grey;
         }
@@ -45,6 +52,11 @@
             background-color: transparent;
             outline: none;
             cursor: pointer;
+
+            @include mobile {
+                top: 17px;
+                right: 12px;
+            }
         }
 
         &-img {
@@ -69,7 +81,7 @@
                 margin: 0 0 42px 0;
 
                 @include mobile {
-                    @include font(16px, 400, 19px);
+                    @include font(16px, 400, 21px);
                     margin: 0 0 25px 0;
                 }
             }
@@ -91,13 +103,15 @@
                 }
 
                 @include mobile {
+                    @include font(12px, 400, 16px);
                     width: 25px;
-                    height: 14px;
+                    height: 13px;
+                    margin: 0 0 0 10px;
                 }
             }
         }
     }
-  
+
     &__buttons {
         @include desctop-mini {
             flex-direction: row;

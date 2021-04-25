@@ -5,24 +5,19 @@
         @include flex();
         align-items: center;
         min-height: 75px;
-
-        @include desctop-mini {
-            padding: 0 25px 0 16px;
-        }
-
-        @include mobile {
-            padding: 0 10px 0 0px;
-        }
     }
 
     &__logo {
         margin: 0 41px 0 0;
         cursor: pointer;
+        vertical-align: inherit;
+
     }
 
     &__search {
         cursor: pointer;
         fill: $white;
+        vertical-align: inherit;
 
         &:hover {
             fill: $pink;
@@ -39,14 +34,20 @@
         &:hover {
             fill: $pink;
         }
+
+        &-img {
+            vertical-align: inherit;
+        }
     }
 
     &__link {
         margin: 0 0 0 33px;
         position: relative;
+        text-decoration: none;
 
         &-img_login {
             fill: $white;
+            vertical-align: inherit;
         }
 
         &-img_login:hover {
@@ -55,6 +56,7 @@
 
         &-img_cart {
             fill: $white;
+            vertical-align: inherit;
         }
 
         &-img_cart:hover {
@@ -92,7 +94,7 @@
         visibility: hidden;
         transition: .5s transform;
         transform-origin: 0 0;
-        z-index: 1;
+        z-index: 3;
 
         &-close {
             border: none;

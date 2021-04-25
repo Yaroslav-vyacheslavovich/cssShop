@@ -58,20 +58,19 @@
         }
 
         &-submit {
-            @include font(14px, 400, 17px);
-            height: 51px;
+            @include font(14px, 400, 18px);
+            height: 49px;
             border-radius: 0 24px 24px 0;
             border: none;
             background-color: $pink;
             color: $white;
             padding: 0px 22px 0px 22px;
-            margin: 1px 0 0 -4px;
             outline: none;
             cursor: pointer;
+            margin: 0 0 0 -4px;
 
             @include mobile {
                 width: 30%;
-                font-size: 30%;
                 padding: 0px 22px 0px 10px;
             }
         }
