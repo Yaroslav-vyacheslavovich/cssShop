@@ -1,0 +1,168 @@
+.registration {
+
+    &__align {
+        display: flex;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__form {
+        @include font(16px, 300, 19px);
+        @include flex(none, column);
+        margin: 64px 0 96px 16px;
+
+        @include desctop-mini {
+            margin: 40px 22px 96px 16px;
+        }
+
+        @include tablet {
+            width: 360px;
+            margin: 40px 0px 0px 0px;
+        }
+
+        @include mobile {
+            margin: 40px 0px 0px 0px;
+            width: 100%;
+        }
+
+
+        &-title {
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+
+        &-input {
+            height: 45px;
+            margin-bottom: 20px;
+            border: 1px solid $grey;
+            padding-left: 17px;
+            font-size: 13px;
+            outline: none;
+
+            &::placeholder {
+                font-size: 13px;
+                color: $grey;
+            }
+
+            &:-moz-placeholder {
+                font-size: 13px;
+                color: $grey;
+            }
+
+            &::-moz-placeholder {
+                font-size: 13px;
+                color: $grey;
+                ;
+            }
+        }
+
+        &-radio {
+            margin-bottom: 35px;
+            font-size: 11px;
+            padding-top: 10px;
+
+            &-input {
+                display: none;
+
+                &:checked+.registration__form-radio-label:before {
+                    border: 2px solid $dark;
+                    background-color: $grey;
+                }
+
+                &:hover+.registration__form-radio-label:before {
+                    background-color: $grey;
+                }
+            }
+
+            &-label {
+                margin-right: 20px;
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 10px;
+                    border: 2px solid $grey;
+                    margin: 0 10px -5px 0px;
+                }
+            }
+        }
+
+        &-text {
+            color: $grey;
+            font-size: 13px;
+            margin: -5px 0 40px 0;
+        }
+
+        &-submit {
+            text-transform: uppercase;
+            height: 50px;
+            outline: none;
+            width: 167px;
+            color: $pink;
+            background-color: $white;
+            border: 1px solid $pink;
+            cursor: pointer;
+
+            &-img {
+                fill: $pink;
+                padding: 0 0 0 20px;
+            }
+
+            &:hover {
+                color: $white;
+                background-color: $pink;
+                border: none;
+                outline: none;
+            }
+
+            &:hover &-img {
+                fill: $white;
+            }
+        }
+    }
+
+    &__desc {
+        @include font(24px, 300, 29px);
+        max-width: 655px;
+        margin: 64px 16px 0 128px;
+
+        @include desctop-mini {
+            @include font(16px, 300, 19px);
+            margin: 40px 16px 0 0px;
+        }
+
+        @include tablet {
+            margin: 40px 0px 100px 0px
+        }
+
+        @include mobile {
+            margin: 40px 0px 100px 0px
+        }
+
+        &-title {
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        &-text {
+            margin: 22px 0 22px 0;
+        }
+
+        &-item {
+            margin: 0 0 16px;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 16px;
+                background-image: url(../img/mark-icon.svg);
+                margin: 0 23px 0 0;
+            }
+        }
+    }
+}
