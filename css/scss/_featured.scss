@@ -66,9 +66,17 @@
         &-select {
             text-decoration: none;
 
-            &:hover {
+            &:hover .featured__item-name {
                 color: $pink;
                 font-weight: 900;
+            }
+
+            &:visited {
+                color: $dark;
+            }
+
+            &:active {
+                color: $dark;
             }
         }
 
@@ -91,7 +99,8 @@
         &-price {
             @include font(16px, 400, 19px);
             color: $pink;
-            margin: 18px 0 20px 18px;
+            margin: 18px 0 0 18px;
+            padding: 0 0 20px 0;
         }
 
         &-add {
@@ -117,6 +126,7 @@
                 margin: 13px 13px 13px 11px;
             }
         }
+
     }
 
     &__goods-link {

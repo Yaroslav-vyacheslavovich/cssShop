@@ -1,4 +1,5 @@
 
+
 function openMenu() {
     document.querySelector(".header__navigation").style.transform = "scaleY(1)";
     document.querySelector(".header__navigation").style.visibility = "visible";
@@ -19,5 +20,6 @@ function deleteItem(i) {
         document.querySelector(".cart__list").innerHTML = "Cart is empty!"
     }
 }
+
 
 

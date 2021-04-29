@@ -51,6 +51,26 @@
             background-color: $light-grey;
             padding: 0 0 0 22px;
             outline: none;
+            position: relative;
+
+            &:focus {
+                animation: change 3s infinite;
+            }
+
+            &:focus~.subscribe__form-input-focus {
+                visibility: hidden;
+            }
+
+            &-focus {
+                @include font(14px, 400, 17px);
+                position: absolute;
+                color: $item-text;
+                text-align: left;
+                height: 14px;
+                overflow: hidden;
+                transform: translate(-218px, 15px);
+                animation: write 3s steps(17, end) infinite;
+            }
 
             @include mobile {
                 width: 55%;

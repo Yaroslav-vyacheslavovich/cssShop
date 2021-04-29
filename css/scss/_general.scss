@@ -104,6 +104,23 @@ body {
         text-transform: uppercase;
         padding: 60px 0 0 0;
 
+        &-link {
+            color: $item-text;
+            text-decoration: none;
+
+            &:hover {
+                color: $item-text;
+            }
+
+            &:visited {
+                color: $item-text;
+            }
+
+            &:active {
+                color: $item-text;
+            }
+        }
+
         @include mobile {
             text-align: center;
             padding: 22px 0 0 0;
@@ -117,6 +134,7 @@ body {
 
 .flex {
     @include flex;
+
     @include mobile {
         flex-direction: column;
     }
@@ -131,4 +149,70 @@ input[type="number"] {
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     display: none;
+}
+
+@keyframes logoRotator {
+    0% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes breath {
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes goAway {
+    100% {
+        transform: translate(2500px, 2500px);
+    }
+
+}
+
+@keyframes write {
+    from {
+        width: 0em;
+    }
+
+    to {
+        width: 120px;
+    }
+}
+
+@keyframes change {
+    0% {
+        background-color: $light-grey;
+    }
+
+    50% {
+        background-color: $light-pink;
+    }
+
+    100% {
+        background-color: $light-grey;
+    }
+}
+
+@keyframes tu-tu {
+    0% {
+        fill: $pink;
+    }
+
+    100% {
+        fill: $dark;
+        transform: translateX(200px);
+    }
+
 }

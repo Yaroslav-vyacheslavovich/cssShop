@@ -7,20 +7,35 @@
         min-height: 75px;
     }
 
-    &__logo {
+    &__logo-img {
         margin: 0 41px 0 0;
         cursor: pointer;
         vertical-align: inherit;
+        width: 44px;
 
+        &:hover {
+            animation-name: logoRotator;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        &:active {
+            animation: logoRotator 0.1s infinite linear, goAway 10s;
+        }
     }
 
     &__search {
         cursor: pointer;
         fill: $white;
         vertical-align: inherit;
+        transition-duration: .5s;
+        transition-property: width, height;
 
         &:hover {
             fill: $pink;
+            width: 35px;
+            height: 35px;
         }
     }
 
@@ -31,8 +46,9 @@
         cursor: pointer;
         fill: $white;
 
-        &:hover {
+        &:hover .header__button-img {
             fill: $pink;
+            animation: breath 2s infinite;
         }
 
         &-img {
@@ -45,22 +61,34 @@
         position: relative;
         text-decoration: none;
 
-        &-img_login {
+        &-login-img {
             fill: $white;
             vertical-align: inherit;
+
+            &:hover {
+                fill: $pink;
+                animation-name: pulse;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
         }
 
-        &-img_login:hover {
-            fill: $pink;
-        }
+        &-cart {
+            transition-duration: 3s;
+            transition-property: opacity;
 
-        &-img_cart {
-            fill: $white;
-            vertical-align: inherit;
-        }
+            &:hover {
+                opacity: 0;
+            }
 
-        &-img_cart:hover {
-            fill: $pink;
+            &:hover .header__link-cart-img {
+                animation: tu-tu 3s forwards;
+            }
+
+            &-img {
+                vertical-align: inherit;
+                fill: $white;
+            }
         }
 
         @include mobile {
@@ -79,6 +107,8 @@
         position: absolute;
         left: 23px;
         bottom: 18px;
+        z-index: 1;
+
     }
 
     &__navigation {
