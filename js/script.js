@@ -21,7 +21,6 @@ function deleteItem(i) {
     }
 }
 
-
 let selected;
 function openFilters(cl) {
     let selected = document.getElementsByClassName(cl);
